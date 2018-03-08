@@ -7,6 +7,7 @@ public class testFinally {
 		//System.out.println(test(tfsa).getSs());
 		System.out.println(test(tfsa).getAint());
 		System.out.println(testFinally.fun());
+		System.out.println("Write this just for git preview");
 	}
 
 	public static int fun() {
