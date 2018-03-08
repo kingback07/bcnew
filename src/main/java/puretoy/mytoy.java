@@ -17,7 +17,7 @@ public class mytoy {
 		/**
 		 * 采用线程池执行多线程操作
 		 */
-
+		//创建线程池
 		ThreadPoolExecutor excutor = new ThreadPoolExecutor(1, 10, 200, TimeUnit.SECONDS,
 				new ArrayBlockingQueue<Runnable>(5));
 		long startTime = new Date().getTime();
