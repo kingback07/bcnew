@@ -12,7 +12,8 @@ public class Cls4Readme {
 		this.readName = readName;
 	}
 	
-	private int testInt;
+	private int testInt;//create new comment for bugfix
+	
 
 	public int getTestInt() {
 		return testInt;
