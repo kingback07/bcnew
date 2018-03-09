@@ -12,4 +12,14 @@ public class Cls4Readme {
 		this.readName = readName;
 	}
 	
+	private int testInt;
+
+	public int getTestInt() {
+		return testInt;
+	}
+
+	public void setTestInt(int testInt) {
+		this.testInt = testInt;
+	}
+	
 }
