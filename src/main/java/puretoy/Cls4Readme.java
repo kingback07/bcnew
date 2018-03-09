@@ -23,4 +23,8 @@ public class Cls4Readme {
 		this.testInt = testInt;
 	}
 	
+	public void notice(){
+		System.out.println("This function is test for github branch");
+	}
+	
 }
