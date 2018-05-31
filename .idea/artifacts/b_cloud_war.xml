@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="b-cloud:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="BookIncredible.war">
+      <element id="artifact" artifact-name="b-cloud:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,6 +1,7 @@
 package com.tectoy.bcloud.util;
 
-import java.util.Date;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class test {
 
@@ -10,6 +11,13 @@ public class test {
 		Date d=new Date(l);
 		
 		System.out.println(d.toString());
+
+		List<String> sa=new ArrayList<String>();
+		sa.add("a");
+		sa.add("b");
+		sa.add("c");
+		//sa.sort();
+
 	}
 
 }
