@@ -6,6 +6,8 @@ import java.util.List;
 /**
  * Created by kingb on 2018/6/22.
  * 假设字符串中包含空格和字符，如何倒置
+ * 昨天遇到的面试题，当时面一下午思维已然混沌
+ * 回来之后依稀记得此题则代码实现
  */
 public class StringQue {
 
