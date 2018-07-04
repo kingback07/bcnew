@@ -2,6 +2,8 @@ package puretoy.InterviewQueDemo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by kingb on 2018/6/22.
@@ -12,9 +14,11 @@ import java.util.List;
 public class StringQue {
 
     public static void main(String[] args){
-        String s1="   I  Love  java    ";
+        String s1="   I  Love  java";
         String rs=reverseStr(s1);
         System.out.println(rs);
+        String rs2=reverseStr4Rex(s1);
+        System.out.println("使用正则拆分方式的结果:"+rs2);
     }
 
     public static String reverseStr(String srcStr){
@@ -64,4 +68,34 @@ public class StringQue {
         return resStr;
     }
 
+
+    /**
+     * 使用正则表达式分解字符串
+     * 今天看到在很多的内存数据处理中，正则表达式的使用还是很广泛的
+     * 回想之前遇到的这个面试题，似乎可以直接使用正则做拆分，简化了代码和循环复杂度
+     * @param srcStr
+     * @return
+     */
+    public static String reverseStr4Rex(String srcStr){
+        Pattern PATH_TAB=Pattern.compile("(\\s*)(\\w*)");
+        Matcher matcher=PATH_TAB.matcher(srcStr);
+        List<String> resList=new ArrayList<String>();
+        while(matcher.find()){
+            //System.out.println("GROUP1 is: "+matcher.group(1)+"++++GOURP2 is: "+matcher.group(2));
+            //对空格不做任何处理，对字符串执行反转处理[注释]
+            resList.add(matcher.group(1));
+            String realStr=matcher.group(2);
+            //StringBuilder sb=new StringBuilder(realStr);
+            //realStr=sb.reverse().toString();
+            resList.add(realStr);
+        }
+        if(resList.size()>0){
+            String result="";
+            for(int i=resList.size()-1;i>=0;i--){
+                result+=resList.get(i);
+            }
+            return result;
+        }
+        return null;
+    }
 }
